@@ -51,16 +51,16 @@ transition: transform 0.4s ease;
 }
 .nav.visible { transform: translateY(0); }
 .nav-brand { font-family: ‘Bebas Neue’, sans-serif; font-size: 1.3rem; letter-spacing: 3px; }
-.nav-brand .teal { color: var(–retro-teal); }
-.nav-brand .orange { color: var(–fire-orange); }
+.nav-brand .teal { color: var(--retro-teal); }
+.nav-brand .orange { color: var(--fire-orange); }
 .nav-links { display: flex; gap: 1.2rem; flex-wrap: wrap; }
 .nav-links a {
 font-family: ‘Barlow Condensed’, sans-serif; font-weight: 500; font-size: 0.78rem;
 letter-spacing: 2px; text-transform: uppercase;
 color: rgba(245,230,200,0.5); text-decoration: none; transition: color 0.3s;
 }
-.nav-links a:hover { color: var(–retro-teal); }
-.nav-links a.active { color: var(–retro-teal); }
+.nav-links a:hover { color: var(--retro-teal); }
+.nav-links a.active { color: var(--retro-teal); }
 
 /* HERO */
 .hero {
@@ -71,7 +71,7 @@ background:
 radial-gradient(ellipse at 50% 30%, rgba(59,188,180,0.08) 0%, transparent 50%),
 radial-gradient(ellipse at 30% 70%, rgba(232,97,45,0.06) 0%, transparent 50%),
 radial-gradient(ellipse at 70% 70%, rgba(75,168,212,0.05) 0%, transparent 50%),
-linear-gradient(180deg, var(–midnight) 0%, var(–navy) 50%, var(–deep-blue) 100%);
+linear-gradient(180deg, var(--midnight) 0%, var(--navy) 50%, var(--deep-blue) 100%);
 padding: 2rem;
 }
 .hero::before {
@@ -82,8 +82,8 @@ repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(59,188,180,0
 pointer-events: none;
 }
 .hero::after {
-content: ‘’; position: absolute; bottom: 0; left: 0; right: 0; height: 200px;
-background: linear-gradient(to bottom, transparent, var(–midnight)); z-index: 2;
+content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 200px;
+background: linear-gradient(to bottom, transparent, var(--midnight)); z-index: 2;
 }
 .hero-content { position: relative; z-index: 3; }
 .logo-container { margin-bottom: 1.5rem; animation: fadeInDown 1s ease 0.2s both; }
@@ -97,18 +97,18 @@ animation: logoPulse 4s ease-in-out infinite;
 50% { filter: drop-shadow(0 0 50px rgba(59,188,180,0.4)) drop-shadow(0 0 100px rgba(232,97,45,0.3)); }
 }
 .event-type {
-font-family: ‘Bebas Neue’, sans-serif;
+font-family: 'Bebas Neue', sans-serif;
 font-size: clamp(2.5rem, 7vw, 5.5rem);
 letter-spacing: 6px; line-height: 1;
-background: linear-gradient(135deg, var(–gold) 0%, var(–fire-orange) 50%, var(–warm-red) 100%);
+background: linear-gradient(135deg, var(--gold) 0%, var(--fire-orange) 50%, var(--warm-red) 100%);
 -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 animation: fadeInUp 1s ease 0.5s both;
 }
 .event-type .crown-icon { -webkit-text-fill-color: initial; font-size: 0.8em; }
 .tagline {
-font-family: ‘Barlow Condensed’, sans-serif; font-weight: 600;
+font-family: 'Barlow Condensed', sans-serif; font-weight: 600;
 font-size: clamp(0.8rem, 2vw, 1.1rem); letter-spacing: 5px;
-text-transform: uppercase; color: var(–retro-teal); margin-top: 0.5rem;
+text-transform: uppercase; color: var(--retro-teal); margin-top: 0.5rem;
 animation: fadeInUp 1s ease 0.7s both;
 }
 .hero-meta {
@@ -126,13 +126,13 @@ letter-spacing: 3px; text-transform: uppercase; color: rgba(59,188,180,0.6); mar
 }
 .meta-item .value { font-family: ‘Oswald’, sans-serif; font-size: 1.1rem; font-weight: 600; }
 .scroll-cue { position: absolute; bottom: 35px; left: 50%; transform: translateX(-50%); z-index: 10; animation: fadeInUp 1s ease 1.4s both; }
-.scroll-cue span { display: block; width: 2px; height: 30px; background: linear-gradient(to bottom, var(–retro-teal), transparent); margin: 0 auto; animation: scrollPulse 2s ease-in-out infinite; }
+.scroll-cue span { display: block; width: 2px; height: 30px; background: linear-gradient(to bottom, var(--retro-teal), transparent); margin: 0 auto; animation: scrollPulse 2s ease-in-out infinite; }
 @keyframes scrollPulse { 0%,100% { opacity:1; height:30px; } 50% { opacity:0.3; height:18px; } }
 @keyframes fadeInUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
 @keyframes fadeInDown { from { opacity:0; transform:translateY(-20px); } to { opacity:1; transform:translateY(0); } }
 
 /* DIVIDERS */
-.fire-divider { width: 100%; height: 2px; background: linear-gradient(to right, transparent, var(–fire-orange), var(–retro-teal), var(–fire-orange), transparent); opacity: 0.4; }
+.fire-divider { width: 100%; height: 2px; background: linear-gradient(to right, transparent, var(--fire-orange), var(--retro-teal), var(--fire-orange), transparent); opacity: 0.4; }
 
 /* FORMAT BAR */
 .format-bar {
@@ -142,21 +142,21 @@ border-bottom: 1px solid rgba(59,188,180,0.08); padding: 2.5rem 1.5rem;
 .format-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.2rem; text-align: center; }
 .format-item { padding: 1rem; }
 .format-item .icon { font-size: 1.6rem; margin-bottom: 0.4rem; }
-.format-item h3 { font-family: ‘Oswald’, sans-serif; font-weight: 600; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; color: var(–retro-teal); margin-bottom: 0.2rem; }
+.format-item h3 { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; color: var(--retro-teal); margin-bottom: 0.2rem; }
 .format-item p { font-size: 0.78rem; color: rgba(245,230,200,0.45); line-height: 1.4; }
 
 /* SECTIONS */
 .section { padding: 3.5rem 1.5rem; max-width: 1200px; margin: 0 auto; }
 .section-header { text-align: center; margin-bottom: 2.5rem; }
-.section-header h2 { font-family: ‘Bebas Neue’, sans-serif; font-size: clamp(1.8rem, 5vw, 3rem); color: var(–cream); letter-spacing: 4px; }
-.section-header .accent-line { width: 60px; height: 3px; background: linear-gradient(to right, var(–fire-orange), var(–retro-teal)); margin: 0.6rem auto 0; }
+.section-header h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem, 5vw, 3rem); color: var(--cream); letter-spacing: 4px; }
+.section-header .accent-line { width: 60px; height: 3px; background: linear-gradient(to right, var(--fire-orange), var(--retro-teal)); margin: 0.6rem auto 0; }
 .section-header .sub { font-family: ‘Barlow Condensed’, sans-serif; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; color: rgba(245,230,200,0.35); margin-top: 0.4rem; }
 
 /* COURT GROUPS */
 .court-group { margin-bottom: 2.5rem; }
 .court-group-label {
-font-family: ‘Bebas Neue’, sans-serif; font-size: 1.3rem; letter-spacing: 5px;
-color: var(–fire-orange); text-align: center; margin-bottom: 1.2rem;
+font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 5px;
+color: var(--fire-orange); text-align: center; margin-bottom: 1.2rem;
 display: flex; align-items: center; justify-content: center; gap: 1rem;
 }
 .court-group-label::before, .court-group-label::after { content:’’; width:50px; height:1px; background: linear-gradient(to right, transparent, rgba(232,97,45,0.4)); }
@@ -178,9 +178,9 @@ opacity:0; animation: revealCard 0.6s ease forwards;
 .pool-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.3), 0 0 20px rgba(59,188,180,0.06); border-color: rgba(59,188,180,0.2); }
 @keyframes revealCard { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
 
-.pool-header { display: flex; justify-content: space-between; align-items: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, rgba(59,188,180,0.12), rgba(232,97,45,0.06)); border-bottom: 2px solid var(–retro-teal); }
+.pool-header { display: flex; justify-content: space-between; align-items: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, rgba(59,188,180,0.12), rgba(232,97,45,0.06)); border-bottom: 2px solid var(--retro-teal); }
 .pool-name { font-family: ‘Oswald’, sans-serif; font-weight: 700; font-size: 1.05rem; letter-spacing: 2px; text-transform: uppercase; }
-.court-badge { font-family: ‘Barlow Condensed’, sans-serif; font-weight: 600; font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; color: var(–retro-teal); background: rgba(59,188,180,0.1); border: 1px solid rgba(59,188,180,0.3); padding: 0.2rem 0.6rem; border-radius: 2px; }
+.court-badge { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--retro-teal); background: rgba(59,188,180,0.1); border: 1px solid rgba(59,188,180,0.3); padding: 0.2rem 0.6rem; border-radius: 2px; }
 
 /* PLAYER ROSTER in card */
 .pool-roster { padding: 0.5rem 1rem; border-bottom: 1px solid rgba(59,188,180,0.06); display: flex; flex-wrap: wrap; gap: 0.3rem; }
@@ -193,10 +193,10 @@ background: rgba(59,188,180,0.06); padding: 0.15rem 0.5rem; border-radius: 2px;
 .game-row { display: flex; align-items: center; padding: 0.6rem 1rem; border-bottom: 1px solid rgba(59,188,180,0.03); transition: background 0.2s; }
 .game-row:last-child { border-bottom: none; }
 .game-row:hover { background: rgba(59,188,180,0.03); }
-.game-time { font-family: ‘Oswald’, sans-serif; font-weight: 600; font-size: 0.9rem; color: var(–sunset-orange); min-width: 48px; flex-shrink: 0; }
-.game-matchup { font-family: ‘Barlow’, sans-serif; font-size: 0.82rem; color: rgba(245,230,200,0.8); line-height: 1.35; flex: 1; }
-.vs { color: var(–fire-orange); font-weight: 700; font-size: 0.65rem; margin: 0 0.3rem; text-transform: uppercase; }
-.team { font-weight: 500; color: var(–cream); }
+.game-time { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 0.9rem; color: var(--sunset-orange); min-width: 48px; flex-shrink: 0; }
+.game-matchup { font-family: 'Barlow', sans-serif; font-size: 0.82rem; color: rgba(245,230,200,0.8); line-height: 1.35; flex: 1; }
+.vs { color: var(--fire-orange); font-weight: 700; font-size: 0.65rem; margin: 0 0.3rem; text-transform: uppercase; }
+.team { font-weight: 500; color: var(--cream); }
 .pts-badge { font-family: 'Barlow Condensed', sans-serif; font-size: 0.6rem; color: rgba(59,188,180,0.5); letter-spacing: 1px; margin-left: auto; flex-shrink: 0; padding-left: 0.5rem; }
 
 /* ===== BRACKET SECTION ===== */
@@ -215,14 +215,14 @@ border: 1px solid rgba(59,188,180,0.1); border-radius: 4px; overflow: hidden;
 
 .bracket-title {
 padding: 0.8rem 1.2rem;
-font-family: ‘Oswald’, sans-serif; font-weight: 700; font-size: 1.1rem;
+font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 1.1rem;
 letter-spacing: 3px; text-transform: uppercase;
-border-bottom: 2px solid var(–retro-teal);
+border-bottom: 2px solid var(--retro-teal);
 display: flex; align-items: center; gap: 0.5rem;
 }
 
-.bracket-title.gold { border-bottom-color: var(–gold); color: var(–gold); }
-.bracket-title.teal { border-bottom-color: var(–retro-teal); color: var(–retro-teal); }
+.bracket-title.gold { border-bottom-color: var(--gold); color: var(--gold); }
+.bracket-title.teal { border-bottom-color: var(--retro-teal); color: var(--retro-teal); }
 
 .bracket-round {
 padding: 0.5rem 1.2rem;
@@ -242,8 +242,8 @@ display: flex; align-items: center; padding: 0.4rem 0;
 }
 
 .bracket-time {
-font-family: ‘Oswald’, sans-serif; font-weight: 500; font-size: 0.8rem;
-color: var(–sunset-orange); min-width: 50px;
+font-family: 'Oswald', sans-serif; font-weight: 500; font-size: 0.8rem;
+color: var(--sunset-orange); min-width: 50px;
 }
 
 .bracket-court {
@@ -263,14 +263,14 @@ color: rgba(245,230,200,0.7); flex: 1;
 display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.8rem;
 }
 .player-pool-group { background: rgba(27,42,74,0.4); border: 1px solid rgba(59,188,180,0.06); border-radius: 4px; padding: 0.8rem 1rem; }
-.player-pool-label { font-family: ‘Oswald’, sans-serif; font-size: 0.8rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(–retro-teal); margin-bottom: 0.4rem; }
+.player-pool-label { font-family: 'Oswald', sans-serif; font-size: 0.8rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--retro-teal); margin-bottom: 0.4rem; }
 .player-name-row { font-family: ‘Barlow’, sans-serif; font-size: 0.82rem; color: rgba(245,230,200,0.7); padding: 0.15rem 0; display: flex; align-items: center; gap: 0.4rem; }
 .player-num { font-family: ‘Barlow Condensed’, sans-serif; font-size: 0.7rem; color: rgba(245,230,200,0.3); min-width: 14px; }
 /* FOOTER */
 .footer { text-align: center; padding: 3rem 1.5rem 2rem; border-top: 1px solid rgba(59,188,180,0.08); margin-top: 1rem; }
 .footer-logo { width: 100px; height: auto; opacity: 0.4; margin-bottom: 0.8rem; }
 .footer p { font-family: ‘Barlow Condensed’, sans-serif; font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; color: rgba(245,230,200,0.2); }
-.footer .footer-tagline { font-family: ‘Oswald’, sans-serif; font-size: 0.9rem; color: var(–fire-orange); letter-spacing: 4px; margin-top: 0.4rem; opacity: 0.6; }
+.footer .footer-tagline { font-family: 'Oswald', sans-serif; font-size: 0.9rem; color: var(--fire-orange); letter-spacing: 4px; margin-top: 0.4rem; opacity: 0.6; }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
@@ -429,7 +429,6 @@ font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 600;
     <div class="court-group-label">Courts 1 & 2</div>
     <div class="pools-grid">
 
-```
   <div class="pool-card">
     <div class="pool-header"><span class="pool-name">Pool 1</span><span class="court-badge">Court 1</span></div>
     <div class="pool-roster"><span class="roster-player">Kyle</span><span class="roster-player">Blake</span><span class="roster-player">Chris W.</span><span class="roster-player">Jeff C.</span></div>
@@ -470,7 +469,6 @@ font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 600;
     </div>
   </div>
 </div>
-```
 
   </div>
 
@@ -489,7 +487,6 @@ font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 600;
         </div>
       </div>
 
-```
   <div class="pool-card">
     <div class="pool-header"><span class="pool-name">Pool 6</span><span class="court-badge">Court 3</span></div>
     <div class="pool-roster"><span class="roster-player">Nathan A.</span><span class="roster-player">Devon</span><span class="roster-player">David G.</span><span class="roster-player">Tom M.</span></div>
@@ -520,7 +517,6 @@ font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 600;
     </div>
   </div>
 </div>
-```
 
   </div>
 
@@ -541,7 +537,6 @@ font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 600;
         </div>
       </div>
 
-```
   <div class="pool-card">
     <div class="pool-header"><span class="pool-name">Pool 10</span><span class="court-badge">Court 6</span></div>
     <div class="pool-roster"><span class="roster-player">Alan G.</span><span class="roster-player">Kris A.</span><span class="roster-player">Jeff M.</span><span class="roster-player">Steve G.</span><span class="roster-player">Jay C.</span></div>
@@ -554,7 +549,6 @@ font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 600;
     </div>
   </div>
 </div>
-```
 
   </div>
 </section>
@@ -575,7 +569,6 @@ font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 600;
     <div class="bracket-card">
       <div class="bracket-title gold">🏆 Championship Bracket (H)</div>
 
-```
   <div class="bracket-round">
     <div class="round-label">Round of 12 · 12:30 PM</div>
     <div class="bracket-game"><span class="bracket-time">12:30</span><span class="bracket-court">Ct 1</span><span class="bracket-matchup">H8 vs H9</span></div>
@@ -631,7 +624,6 @@ font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 600;
     <div class="bracket-game"><span class="bracket-time">2:30</span><span class="bracket-court">Ct 3</span><span class="bracket-matchup">🎯 SF Winner vs SF Winner</span></div>
   </div>
 </div>
-```
 
   </div>
 </section>
