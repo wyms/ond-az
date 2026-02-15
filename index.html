@@ -340,6 +340,36 @@ font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 600;
 .podium-item.gold .podium-name { color: var(--gold); }
 .podium-item.silver .podium-name { color: var(--cream); }
 .podium-item.bronze .podium-name { color: var(--sunset-orange); }
+
+/* RESULTS IMAGES */
+.results-grid {
+display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;
+}
+.results-bracket-group { text-align: center; }
+.results-bracket-title {
+font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: 3px;
+margin-bottom: 1rem; color: var(--fire-orange);
+}
+.results-image-pair { display: flex; flex-direction: column; gap: 1rem; }
+.result-image-item { text-align: center; }
+.result-image-item img {
+width: 100%; max-width: 400px; height: auto; border-radius: 4px;
+border: 1px solid rgba(59,188,180,0.2);
+box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+transition: transform 0.3s, box-shadow 0.3s;
+}
+.result-image-item img:hover {
+transform: scale(1.02);
+box-shadow: 0 6px 20px rgba(59,188,180,0.2);
+}
+.result-image-label {
+font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem;
+letter-spacing: 2px; text-transform: uppercase; color: rgba(245,230,200,0.5);
+margin-top: 0.5rem;
+}
+@media (max-width: 768px) {
+.results-grid { grid-template-columns: 1fr; }
+}
 </style>
 
 </head>
@@ -717,6 +747,57 @@ font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 600;
 
 <div class="fire-divider"></div>
 
+<!-- ===== KOB RESULTS ===== -->
+<section class="section results-section results-available" id="d1-results">
+  <div class="section-header">
+    <h2>Championship Results</h2>
+    <div class="accent-line"></div>
+    <div class="sub">Saturday, January 25, 2026</div>
+  </div>
+
+  <div class="results-grid">
+    <!-- Eagle Bracket (Championship) -->
+    <div class="results-bracket-group">
+      <div class="results-bracket-title">🏆 Eagle Bracket (Championship)</div>
+      <div class="results-image-pair">
+        <div class="result-image-item">
+          <img src="OND_AZ_EAGLE_CHAMPIONS.JPEG" alt="Eagle Champions - Kyle and Steve">
+          <div class="result-image-label">Champions: Kyle & Steve</div>
+        </div>
+        <div class="result-image-item">
+          <img src="OND_AZ_EAGLE_FINALS.JPEG" alt="Eagle Finalists - Kris and Jeff">
+          <div class="result-image-label">Finalists: Kris & Jeff</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hawk Bracket (Consolation) -->
+    <div class="results-bracket-group">
+      <div class="results-bracket-title">🦅 Hawk Bracket (Consolation)</div>
+      <div class="results-image-pair">
+        <div class="result-image-item">
+          <img src="OND_AZ_HAWK_CHAMPIONS.JPEG" alt="Hawk Champions - Angelo and Dan">
+          <div class="result-image-label">Champions: Angelo & Dan</div>
+        </div>
+        <div class="result-image-item">
+          <img src="OND_AZ_HAWK_FINALS.JPEG" alt="Hawk Finalists - Doc and Bruce">
+          <div class="result-image-label">Finalists: Doc & Bruce</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Message from Scott -->
+  <div style="max-width: 700px; margin: 2rem auto; padding: 1.5rem; background: linear-gradient(135deg, rgba(59,188,180,0.08), rgba(232,97,45,0.06)); border-left: 3px solid var(--retro-teal); border-radius: 4px;">
+    <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: var(--retro-teal); margin-bottom: 0.8rem;">Message from Scott</div>
+    <div style="font-family: 'Barlow', sans-serif; font-size: 0.95rem; line-height: 1.6; color: rgba(245,230,200,0.85);">
+      Thanks to all those who played today. A truly great day!!!! Check in tomorrow is at 9:00. 1st serve 9:30. We currently have 18 teams. 2 5 pools 2 4 pools. Then Eagle/Hawk single elimination. If you are not going to play just let me know tonight. Appreciate all of you!
+    </div>
+  </div>
+</section>
+
+<div class="fire-divider"></div>
+
 </div><!-- end #day1 -->
 
 <!-- ===== DAY 2 CONTENT ===== -->
@@ -869,30 +950,39 @@ font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 600;
   <div class="section-header">
     <h2>Team Index</h2>
     <div class="accent-line"></div>
-    <div class="sub">12 Teams · 3 Pools · Combined Age = Dino Number</div>
+    <div class="sub">18 Teams · 4 Pools · Combined Age = Dino Number</div>
   </div>
 
   <div class="player-grid">
     <div class="player-pool-group">
-      <div class="player-pool-label">Pool A · Court 1</div>
-      <div class="player-name-row"><span class="player-num">1</span> Angelo Guinasso & Rob Landel · 129</div>
-      <div class="player-name-row"><span class="player-num">2</span> Alan Gluntz & Steve Schmidt · 116</div>
-      <div class="player-name-row"><span class="player-num">3</span> Scott Peters & Rick Kalinowski · 115</div>
-      <div class="player-name-row"><span class="player-num">4</span> Kent Denmark & Bryan Sheehan · 115</div>
-    </div>
-    <div class="player-pool-group">
-      <div class="player-pool-label">Pool B · Court 2</div>
-      <div class="player-name-row"><span class="player-num">1</span> Paul Zyskowski & Bruce Brazis · 114</div>
-      <div class="player-name-row"><span class="player-num">2</span> Devon Auth & Randy Munoz · 111</div>
-      <div class="player-name-row"><span class="player-num">3</span> Jeff Bunge & Bill Pincus · 110</div>
+      <div class="player-pool-label">Pool 1</div>
+      <div class="player-name-row"><span class="player-num">1</span> Kyle Kennedy & Wayne Young · 109</div>
+      <div class="player-name-row"><span class="player-num">2</span> Blake Rocap & Jon Jennings · 96</div>
+      <div class="player-name-row"><span class="player-num">3</span> Joel Zimmerman & Nathan Adams · 108</div>
       <div class="player-name-row"><span class="player-num">4</span> Bojan Nisavic & Steve Gillan · 109</div>
     </div>
     <div class="player-pool-group">
-      <div class="player-pool-label">Pool C · Court 3</div>
-      <div class="player-name-row"><span class="player-num">1</span> Kyle Kennedy & Wayne Young · 109</div>
-      <div class="player-name-row"><span class="player-num">2</span> Chad Scates & Kris Adkins · 109</div>
-      <div class="player-name-row"><span class="player-num">3</span> Dar Griffeth & Joe Raquiza · 108</div>
-      <div class="player-name-row"><span class="player-num">4</span> Nathan Adams & Joel Zimmerman · 108</div>
+      <div class="player-pool-label">Pool 2</div>
+      <div class="player-name-row"><span class="player-num">1</span> Dar Griffeth & Joe Raquiza · 108</div>
+      <div class="player-name-row"><span class="player-num">2</span> Jeff Bunge & Bill Pincus · 110</div>
+      <div class="player-name-row"><span class="player-num">3</span> Devon Auth & Randy Munoz · 111</div>
+      <div class="player-name-row"><span class="player-num">4</span> Scott Peters & Rick Kalinowski · 115</div>
+    </div>
+    <div class="player-pool-group">
+      <div class="player-pool-label">Pool 3 · 5 Teams</div>
+      <div class="player-name-row"><span class="player-num">1</span> Alan Gluntz & Steve Schmidt · 116</div>
+      <div class="player-name-row"><span class="player-num">2</span> Joe Lambert & Mike Hawkins · 105</div>
+      <div class="player-name-row"><span class="player-num">3</span> David Grangaard & Steve Devlin · 105</div>
+      <div class="player-name-row"><span class="player-num">4</span> Kent Denmark & Bryan Sheehan · 116</div>
+      <div class="player-name-row"><span class="player-num">5</span> Paul Zyskowski & Bruce Brazis · 114</div>
+    </div>
+    <div class="player-pool-group">
+      <div class="player-pool-label">Pool 4 · 5 Teams</div>
+      <div class="player-name-row"><span class="player-num">1</span> Chad Scates & Kris Adkins · 109</div>
+      <div class="player-name-row"><span class="player-num">2</span> Omar Ruiz & Scott Hill · 96</div>
+      <div class="player-name-row"><span class="player-num">3</span> James Pinto & Dan Hamm · 115</div>
+      <div class="player-name-row"><span class="player-num">4</span> Chris Wells & John Hasenbein · 120</div>
+      <div class="player-name-row"><span class="player-num">5</span> Angelo Guinasso & Rob Landel · 129</div>
     </div>
   </div>
 </section>
