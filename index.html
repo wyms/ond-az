@@ -743,8 +743,12 @@ function switchDay(day) {
   window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
-if (window.location.hash === '#day2') {
-  switchDay('day2');
+// Initialize to show Day 2 by default
+switchDay('day2');
+
+// Handle hash navigation
+if (window.location.hash === '#day1') {
+  switchDay('day1');
 }
 </script>
 
