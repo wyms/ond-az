@@ -408,16 +408,16 @@ margin-top: 0.5rem;
 
 <!-- ===== DAY TOGGLE ===== -->
 <div class="day-toggle" id="day-toggle">
-  <button class="day-btn active" data-day="day1" onclick="switchDay('day1')">
+  <button class="day-btn" data-day="day1" onclick="switchDay('day1')">
     <span class="day-label">Sat Feb 14</span>King of the Beach
   </button>
-  <button class="day-btn" data-day="day2" onclick="switchDay('day2')">
+  <button class="day-btn active" data-day="day2" onclick="switchDay('day2')">
     <span class="day-label">Sun Feb 15</span>Bring Your Partner
   </button>
 </div>
 
 <!-- ===== DAY 1 CONTENT ===== -->
-<div id="day1">
+<div id="day1" style="display:none">
 
 <!-- ===== KOB RESULTS ===== -->
 <section class="section results-section results-available" id="d1-results">
@@ -825,7 +825,7 @@ margin-top: 0.5rem;
 </div><!-- end #day1 -->
 
 <!-- ===== DAY 2 CONTENT ===== -->
-<div id="day2" style="display:none">
+<div id="day2">
 
 <div class="fire-divider"></div>
 
